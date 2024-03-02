@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PheTro Forum</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="phetro.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/50f2ce4e94.js" crossorigin="anonymous"></script>
+
+    <style>
+        .font-inter{
+            font-family: "Inter", sans-serif;
+        }
+        .font-mulish{
+            font-family: "Mulish", sans-serif;
+        }
+    </style>
+</head>
+<body class="lg:max-w-[1440px] mx-auto">
+    <header class="lg:w-[1170px] mx-auto p-5">
+       <nav class="my-[55px]">
+        <div class="navbar p-0 gap-0  bg-base-100">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn p-0 btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul id="list-cont" tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a class="tooltip" data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a class="tooltip" data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
+                    <li><a class="tooltip" data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
+                    <li><a class="tooltip" data-tip="Therms"><i class="fa-regular fa-flag"></i></a></li>
+                </ul>
+              </div>
+              <a class="btn p-0 btn-ghost text-2xl lg:text-4xl text-[#12132D] font-black">PheTro</a>
+            </div>
+           
+            <div class="navbar-end">
+                <ul id="list-cont" class="menu menu-horizontal hidden lg:block lg:flex px-1 gap-3">
+                    <li><a class="tooltip" data-tip="Home"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a class="tooltip" data-tip="Edit"><i class="fa-solid fa-pen"></i></a></li>
+                    <li><a class="tooltip" data-tip="Add"><i class="fa-solid fa-user-plus"></i></a></li>
+                    <li><a class="tooltip" data-tip="Therms"><i class="fa-regular fa-flag"></i></a></li>
+                  </ul>
+              <a class="btn ml-6 text-white lg:text-[20px] px-5 lg:px-10 rounded-[50px] bg-[#797DFC] font-bold">Sign In</a>
+            </div>
+          </div>
+       </nav>
+       <!-- banner section -->
+       <div class="bg-[#12132D] flex flex-col lg:flex-row justify-between  bg-[url(./images/bgbanner.png)] bg-no-repeat bg-bottom p-10 lg:p-[100px] rounded-[32px] ">
+          <div>
+            <h3 class="text-white  font-black text-3xl lg:text-[64px] font-font-mulish">Welcome to the<br><br class="lg:block hidden"> <span class="phetro">PheTro</span> Forum</h3>
+            <p class="mt-5 text-[#FFFFFFCC] text-[20px] font-medium">Share your favorite opinion and win and wp<br> forum coffee mug!</p>
+            <div class="mt-8 flex  w-full lg:w-[400px] relative  items-center">
+              <input type="text" placeholder="Search here anything" class="lg:w-[400px] w-full  py-[18px] px-[20px]  border-none  text-[#0307127F] font-medium rounded-[50px] bg-white">
+              <a href="" class="absolute right-2"><button class="text-white py-[6px] p-2 lg:px-6 font-bold lg:text-[20px] bg-[#797DFC] rounded-[46px]">Search</button></a>
+            </div>
+          </div>
+          <div class="bg-white grid gap-6 rounded-[32px] text-[#12132DCC] lg:text-2xl font-medium lg:w-[371px] w-full mt-4 lg:mt-0 p-12">
+            <div class="flex justify-between ">
+              <h3>Registered Users</h3>
+              <p>01</p>
+            </div>
+            <div class="flex justify-between ">
+              <h3>Forum</h3>
+              <p>01</p>
+            </div>
+            <div class="flex justify-between ">
+              <h3>Topics</h3>
+              <p>01</p>
+            </div>
+            <div class="flex justify-between ">
+              <h3>Replies</h3>
+              <p>01</p>
+            </div>
+          </div>
+       </div>
+    </header>
+    <main class="lg:w-[1170px] mx-auto">
+      <!-- lets discuss -->
+      <div class="lg:my-[100px] mx-auto">
+       <div class="p-4 lg:p-0">
+        <h3 class="font-black text-[#12132D] text-center mb-3 lg:mb-6 lg:[40px] text-3xl">Let’s Discuss</h3>
+        <p class="text-[#12132D99] text-center">Yes, you can run unit tests and view the results directly within the app. The integrated<br> testing features allow for a streamlined .</p>
+       </div>
+      </div>
+      <!-- join forum -->
+      <div class="bg-[#12132D] w-[350px]  mx-auto my-4 lg:my-0  lg:w-full flex flex-col lg:flex-row lg:justify-between lg:items-center rounded-[32px]">
+        <div class="lg:p-24 p-10 mt-12 lg:mt-0  text-center lg:text-start">
+          <h3 class="lg:text-[40px] text-3xl font-black  text-white">Join Our Forum</h3>
+          <p class="mt-4 text-[#FFFFFFCC] lg:text-[20px] font-medium">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
+          <button class="text-white bg-[#797DFC] mt-4 lg:mt-8 lg:py-[18px] py-3  lg:px-[40px] px-[20px] rounded-[50px] text-[20px] font-bold">Registered Now</button>
+        </div>
+        <div class="w-full h-full flex lg:justify-end mt-[100px] mr-10">
+          <img src="images/joinforum.png" alt="">
+        </div>
+      </div>
+      <!-- latest posts -->
+      <div class="lg:my-[100px] mx-auto">
+        <div class="p-4 lg:p-0">
+         <h3 class="font-black text-[#12132D] text-center mb-3 lg:mb-6 lg:[40px] text-3xl">Latest Posts</h3>
+         <p class="text-[#12132D99] text-center">Yes, you can run unit tests and view the results directly within the app. The integrated<br> testing features allow for a streamlined .</p>
+        </div>
+       </div>
+    </main>
+    <footer>
+      <div class="lg:w-[1170px] lg:p-[100px] p-12 mx-auto grid justify-center text-center">
+        <div>
+          <h3 class="text-4xl font-black text-[#12132D] lg:mb-4 mb-2">PheTro</h3>
+        <p class="text-[#12132DB3] lg:mb-8 mb-6">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br>in a piece of classical Latin literature from 45 BC</p>
+        </div>
+        <div class="flex gap-5 text-2xl justify-center ">
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-github"></i></a>
+        </div>
+        <hr class="border-[#30325E1A] my-8 lg:my-12">
+        <p><span>&copy;2017, All Rights Reserved.</span></p>
+      </div>
+    </footer>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
