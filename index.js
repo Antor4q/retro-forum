@@ -6,9 +6,17 @@ const loadData = () =>{
 }
 
 const displayCard = (data) => {
-    console.log(data)
+    // console.log(data)
     const letsDiscus = document.getElementById('lets-discus')
+    let active;
+   
     data.forEach((card) =>{
+        if(card.isActive === true){
+            active = `<div id="active" class="bg-[#10B981] w-[18px] h-[18px] rounded-full -top-1 -right-1 absolute"></div>`
+         }else{
+           active=  `<div id="active" class="bg-red-500 w-[18px] h-[18px] rounded-full -top-1 -right-1 absolute"></div>`
+         }
+
         console.log(card)
         const div = document.createElement('div');
         console.log(card.isActive)
@@ -17,7 +25,7 @@ const displayCard = (data) => {
         <div class="flex bg-[#F3F3F5] rounded-3xl lg:p-10 w-[772px] gap-6">
             <div class=" w-[72px] relative  h-[72px]">
             <img class="rounded-2xl" src="${card.image}">
-            <span id="active" class="bg-red-500 w-[18px] h-[18px] rounded-full -top-1 -right-1 absolute"></span>
+            ${active}
             </div>
             <div class="w-[669px]">
                 <div class="flex gap-5 text-[#12132DCC] font-medium">
@@ -31,10 +39,10 @@ const displayCard = (data) => {
                     <div class="flex  gap-6">
                     <p class="flex gap-3"><img  src="images/sms.png" alt=""> ${card.comment_count}</p>
                     <p class="flex gap-3"><img src="images/eye.png" alt=""> ${card.view_count}</p>
-                    <p class="flex gap-3"><img src="images/time.png" alt=""> ${card.posted_time}</p>
+                    <p class="flex gap-3"><img src="images/time.png" alt=""> ${card.posted_time} min</p>
                     </div>
                    <div class="bg-[#10B981] rounded-full px-2">
-                   <button class="  text-white  "><i class="fa-solid fa-envelope-open"></i></button>
+                   <button onclick="handleCartCount('${card.title}')" class="  text-white  "><i class="fa-solid fa-envelope-open"></i></button>
                    </div>
                 </div>
             </div>
@@ -42,8 +50,20 @@ const displayCard = (data) => {
         `
         
         letsDiscus.appendChild(div);
-       
+    
+    
     })
+    
 }
+    let sum = 1;
+const handleCartCount = (cardTitle,viewCount) =>{
+    const cartCount = document.getElementById('cart-count');
+    let count = cartCount.innerText
+    sum = parseInt(count) + sum;
+    cartCount.innerText =sum;
+    console.log("it's card title:", cardTitle, "it's view:", viewCount)
+   
+}
+
 
 loadData();
