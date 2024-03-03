@@ -1,3 +1,5 @@
+
+const spinner = document.getElementById('loading-spinner');
 const loadData = () =>{
     const url = 'https://openapi.programming-hero.com/api/retro-forum/posts'
         fetch(url)
@@ -6,20 +8,23 @@ const loadData = () =>{
 }
 
 const displayCard = (data) => {
-    // console.log(data)
+    console.log(data)
     const letsDiscus = document.getElementById('lets-discus')
     let active;
-   
+   letsDiscus.innerHTML = '';
     data.forEach((card) =>{
+       
         if(card.isActive === true){
             active = `<div id="active" class="bg-[#10B981] w-[18px] h-[18px] rounded-full -top-1 -right-1 absolute"></div>`
          }else{
            active=  `<div id="active" class="bg-red-500 w-[18px] h-[18px] rounded-full -top-1 -right-1 absolute"></div>`
          }
 
-        // console.log(card)
+        
+        let cardQuote = card.title.replace("'", '');
+        
         const div = document.createElement('div');
-        console.log(card.isActive)
+        
        
         div.innerHTML = `
         <div class="flex bg-[#F3F3F5] rounded-3xl p-5 lg:p-10 w-[370px] mx-auto lg:w-[772px] gap-6">
@@ -42,7 +47,7 @@ const displayCard = (data) => {
                     <p class="flex  lg:gap-3"><img src="images/time.png" alt=""> ${card.posted_time} min</p>
                     </div>
                    <div class="bg-[#10B981] rounded-full px-2">
-                   <button onclick="handleCartCount('${card.title}','${card.view_count}')" class="  text-white  "><i class="fa-solid fa-envelope-open"></i></button>
+                   <button onclick="handleCartCount('${cardQuote}','${card.view_count}')" class="  text-white  "><i class="fa-solid fa-envelope-open"></i></button>
                    </div>
                 </div>
             </div>
@@ -50,7 +55,7 @@ const displayCard = (data) => {
         `
         
         letsDiscus.appendChild(div);
-    
+        showLoadingSpinner(false);
     
     })
     
@@ -87,11 +92,11 @@ const handlePostsData = () =>{
 }
 
 const showPostsCard = (data) =>{
-    console.log(data)
+    // console.log(data)
     let publishDate;
     let designation;
     data.forEach((card) =>{
-
+       
         if(card.author.posted_date){
             publishDate = `<p class="text-[#12132D99]">  ${card.author.posted_date}</p>`
         }else{
@@ -104,7 +109,7 @@ const showPostsCard = (data) =>{
             designation = "Unknown"
         }
 
-        console.log(card)
+        // console.log(card)
         const latestPostsCards = document.getElementById('latest-post-container');
         const div = document.createElement('div');
         div.innerHTML = `
@@ -134,5 +139,47 @@ const showPostsCard = (data) =>{
     })
 }
 
+
+const handleSearchBar =  async(loading) =>{
+    showLoadingSpinner(loading);
+    const searchInput = document.getElementById('input-field');
+    const value = searchInput.value;
+    console.log(value)
+    
+    const url = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${value}`
+        const fet =await fetch(url)
+            const res = await fet.json()
+            const data =res.posts
+            console.log(data)
+            setTimeout(() => {
+                spinner.classList.add('hidden')
+                displayCard(data)
+            }, 2000);
+          
+            // .then((res) => res.json())
+            // .then((data) => {
+                
+            //     displayCard(data.posts)
+            // })
+}
+
+const showLoadingSpinner = (value) =>{
+    
+   if(value === true){
+        spinner.classList.remove('hidden')
+       
+   }
+}
+
+// const showDataBySearch = (posts) => {
+//     console.log(posts)
+//     posts.forEach((post) =>{
+//         console.log(post)
+//         return ;
+//     })
+// }
+
+
+// handleSearchBar()
 handlePostsData()
 loadData();

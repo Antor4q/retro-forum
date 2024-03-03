@@ -60,8 +60,8 @@
             <h3 class="text-white  font-black text-3xl lg:text-[64px] font-font-mulish">Welcome to the<br><br class="lg:block hidden"> <span class="phetro">PheTro</span> Forum</h3>
             <p class="mt-5 text-[#FFFFFFCC] text-[20px] font-medium">Share your favorite opinion and win and wp<br> forum coffee mug!</p>
             <div class="mt-8 flex  w-full lg:w-[400px] relative  items-center">
-              <input type="text" placeholder="Search here anything" class="lg:w-[400px] w-full  py-[18px] px-[20px]  border-none  text-[#0307127F] font-medium rounded-[50px] bg-white">
-              <a href="" class="absolute right-2"><button class="text-white py-[6px] p-2 lg:px-6 font-bold lg:text-[20px] bg-[#797DFC] rounded-[46px]">Search</button></a>
+              <input type="text" id="input-field" placeholder="Search here anything" class="lg:w-[400px] w-full  py-[18px] px-[20px]  border-none  text-[#0307127F] font-medium rounded-[50px] bg-white">
+              <div  class="absolute right-2"><button onclick="handleSearchBar(true)" class="text-white py-[6px] p-2 lg:px-6 font-bold lg:text-[20px] bg-[#797DFC] rounded-[46px]">Search</button></div>
             </div>
           </div>
           <div class="bg-white grid gap-6 rounded-[32px] text-[#12132DCC] lg:text-2xl font-medium lg:w-[371px] w-full mt-4 lg:mt-0 p-12">
@@ -92,6 +92,12 @@
         <p class="text-[#12132D99] text-center lg:mb-12 mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated<br> testing features allow for a streamlined .</p>
        </div>
        <!-- card  -->
+       <div id="loading-spinner" class="text-center hidden">
+        <span class="loading loading-bars loading-xs"></span>
+        <span class="loading loading-bars loading-sm"></span>
+        <span class="loading loading-bars loading-md"></span>
+        <span class="loading loading-bars loading-lg"></span>
+      </div>
        <div class="flex lg:flex-row flex-col gap-6">
         <div id="lets-discus" class="gap-6 grid">
           
