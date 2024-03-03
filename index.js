@@ -66,7 +66,7 @@ const handleCartCount = (cardTitle,viewCount) =>{
     let countText = cartCount.innerText
     let count = parseInt(countText) + 1;
     cartCount.innerText =count;
-    // console.log("it's card title:", cardTitle, "it's view:", viewCount)
+ 
 
     const rightCard = document.getElementById('right-card');
     const div2 = document.createElement('div');
@@ -92,7 +92,7 @@ const handlePostsData = () =>{
 }
 
 const showPostsCard = (data) =>{
-    // console.log(data)
+  
     let publishDate;
     let designation;
     data.forEach((card) =>{
@@ -109,7 +109,7 @@ const showPostsCard = (data) =>{
             designation = "Unknown"
         }
 
-        // console.log(card)
+   
         const latestPostsCards = document.getElementById('latest-post-container');
         const div = document.createElement('div');
         div.innerHTML = `
@@ -157,11 +157,7 @@ const handleSearchBar =  async(loading) =>{
                 displayCard(data)
             }, 2000);
           
-            // .then((res) => res.json())
-            // .then((data) => {
-                
-            //     displayCard(data.posts)
-            // })
+  
 }
 
 const showLoadingSpinner = (value) =>{
@@ -172,15 +168,6 @@ const showLoadingSpinner = (value) =>{
    }
 }
 
-// const showDataBySearch = (posts) => {
-//     console.log(posts)
-//     posts.forEach((post) =>{
-//         console.log(post)
-//         return ;
-//     })
-// }
 
-
-// handleSearchBar()
 handlePostsData()
 loadData();
