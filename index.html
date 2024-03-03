@@ -8,24 +8,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="phetro.css">
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/50f2ce4e94.js" crossorigin="anonymous"></script>
 
     <style>
-        .font-inter{
-            font-family: "Inter", sans-serif;
-        }
-        .font-mulish{
-            font-family: "Mulish", sans-serif;
-        }
+       
     </style>
 </head>
 <body class="lg:max-w-[1440px] mx-auto">
-    <header class="lg:w-[1170px] mx-auto p-3 lg:p-0">
+    <header class="lg:w-[1170px] mx-auto p-3 font-[font-mulish] lg:p-0">
        <nav class="my-[55px] w-full">
         <div class="navbar p-0 gap-0  bg-base-100">
             <div class="navbar-start">
@@ -102,12 +95,12 @@
         <div id="lets-discus" class="gap-6 grid">
           
         </div>
-        <div class="bg-[#F3F3F5] lg:p-6 w-[370px] p-3 mx-auto lg:w-full  rounded-3xl">
+        <div class="bg-[#F3F3F5] lg:p-6 w-[370px] h-full p-3 mx-auto lg:w-full  rounded-3xl">
           <div class="flex justify-between ">
-            <h4 class="text-[20px] font-bold text-[#12132D]">Title</h4>
+            <h4 class="text-[20px] font-bold text-[#12132D] font-[font-mulish]">Title</h4>
             <div class="flex gap-2 items-center lg:ml-[130px]">
               <img src="images/Frame (9).png" alt="">
-            <p class="text-[#12132D99]"> Mark as read(<span id="cart-count">0</span>)</p>
+            <p class="text-[#12132D99] font-[font-inter]"> Mark as read(<span id="cart-count">0</span>)</p>
             </div>
             
           </div>
@@ -119,7 +112,7 @@
 
       </div>
       <!-- join forum -->
-      <div class="bg-[#12132D]  w-[370px]  mx-auto my-4 lg:my-0  lg:w-full flex flex-col lg:flex-row lg:justify-between lg:items-center rounded-[32px]">
+      <div class="bg-[#12132D] font-[font-mulish]  w-[370px]  mx-auto my-4 lg:my-0  lg:w-full flex flex-col lg:flex-row lg:justify-between lg:items-center rounded-[32px]">
         <div class="lg:p-24 p-10 mt-12 lg:mt-0  text-center lg:text-start">
           <h3 class="lg:text-[40px] text-3xl font-black  text-white">Join Our Forum</h3>
           <p class="mt-4 text-[#FFFFFFCC] lg:text-[20px] font-medium">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
@@ -130,18 +123,18 @@
         </div>
       </div>
       <!-- latest posts -->
-      <div class="lg:my-[100px] mx-auto">
+      <div class="lg:my-[100px]  mx-auto">
         <div class="p-4 lg:p-0">
-         <h3 class="font-black text-[#12132D] text-center mb-3 lg:mb-6 lg:[40px] text-3xl">Latest Posts</h3>
-         <p class="text-[#12132D99] text-center">Yes, you can run unit tests and view the results directly within the app. The integrated<br> testing features allow for a streamlined .</p>
+         <h3 class="font-black text-[#12132D] font-[font-mulish] text-center mb-3 lg:mb-6 lg:[40px] text-3xl">Latest Posts</h3>
+         <p class="text-[#12132D99] text-center font-[font-inter]">Yes, you can run unit tests and view the results directly within the app. The integrated<br> testing features allow for a streamlined .</p>
         </div>
         <!-- latest posts card -->
-        <div id="latest-post-container" class="flex gap-3 flex-col lg:flex-row mx-5 lg:mx-0 lg:gap-6 lg:mt-12">
+        <div id="latest-post-container" class="flex font-[font-mulish] gap-3 flex-col lg:flex-row mx-5 lg:mx-0 lg:gap-6 lg:mt-12">
 
         </div>
        </div>
     </main>
-    <footer class="mt-10 lg:mt-0">
+    <footer class="mt-10 font-[font-mulish] lg:mt-0">
       <div class="lg:w-[1170px] lg:p-[100px] p-12 mx-auto grid justify-center text-center">
         <div>
           <h3 class="text-4xl font-black text-[#12132D] lg:mb-4 mb-2">PheTro</h3>

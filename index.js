@@ -27,7 +27,7 @@ const displayCard = (data) => {
         
        
         div.innerHTML = `
-        <div class="flex bg-[#F3F3F5] rounded-3xl p-5 lg:p-10 w-[370px] mx-auto lg:w-[772px] gap-6">
+        <div class="flex bg-[#F3F3F5] font-[font-inter] rounded-3xl p-5 lg:p-10 w-[370px] mx-auto lg:w-[772px] gap-6">
             <div class=" w-[72px] relative  h-[72px]">
             <img class="rounded-2xl" src="${card.image}">
             ${active}
@@ -37,7 +37,7 @@ const displayCard = (data) => {
                 <p># ${card.category}</p>
                 <p>Author: ${card.author.name}</p>
                 </div>
-                <h3 class="text-[20px] font-bold text-[#12132D] mt-3">${card.title}</h3>
+                <h3 class="text-[20px] font-[font-mulish] font-bold text-[#12132D] mt-3">${card.title}</h3>
                 <p class="text=[#12132D99] mt-4">${card.description}</p>
                 <hr class="border-dashed my-5 border-[#12132D3F]">
                 <div class="flex justify-between ">
@@ -77,8 +77,8 @@ const handleCartCount = (cardTitle,viewCount) =>{
     div2.classList.add('p-4')
     div2.classList.add('rounded-2xl')
     div2.innerHTML = `
-        <h4 class="font-semibold text-[#12132D]">${cardTitle}</h4>
-        <p class="grid grid-cols-2 gap-2"><img src="images/eye.png" alt=""> ${viewCount}</p>
+        <h4 class="font-semibold text-[#12132D] font-[font-mulish]">${cardTitle}</h4>
+        <p class="grid grid-cols-2 font-[font-inter] gap-2"><img src="images/eye.png" alt=""> ${viewCount}</p>
     `;
     rightCard.appendChild(div2);
    
