@@ -144,6 +144,7 @@ const handleSearchBar =  async(loading) =>{
     showLoadingSpinner(loading);
     const searchInput = document.getElementById('input-field');
     const value = searchInput.value;
+    searchInput.value = '';
     console.log(value)
     
     const url = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${value}`
